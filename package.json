@@ -1,0 +1,38 @@
+{
+    "name": "node-performance-gotchas",
+    "version": "3.0.1",
+    "description": "Demonstrating Node.js memory leaks, backpressure, and event loop blocking",
+    "main": "dist/app.js",
+    "scripts": {
+        "build": "tsc",
+        "start": "ts-node src/server.ts",
+        "dev": "cross-env NODE_OPTIONS=--expose-gc ts-node src/server.ts",
+        "spam:safe": "node scripts/spam.mjs safe",
+        "spam:leak": "node scripts/spam.mjs leak",
+        "spam:block": "node scripts/spam-block.mjs",
+        "spam:stream": "node scripts/spam-stream.mjs"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/amin-abbasi/node-performance-gotchas.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "type": "commonjs",
+    "bugs": {
+        "url": "https://github.com/amin-abbasi/node-performance-gotchas/issues"
+    },
+    "homepage": "https://github.com/amin-abbasi/node-performance-gotchas#readme",
+    "devDependencies": {
+        "@types/express": "^5.0.6",
+        "@types/node": "^25.3.3",
+        "cross-env": "^10.1.0",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.9.3"
+    },
+    "dependencies": {
+        "express": "^5.2.1",
+        "gach": "^1.7.5"
+    }
+}
