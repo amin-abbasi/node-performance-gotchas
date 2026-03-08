@@ -1,6 +1,6 @@
 {
     "name": "node-performance-gotchas",
-    "version": "3.0.1",
+    "version": "4.0.0",
     "description": "Demonstrating Node.js memory leaks, backpressure, and event loop blocking",
     "main": "dist/app.js",
     "scripts": {

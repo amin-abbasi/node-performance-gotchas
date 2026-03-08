@@ -16,11 +16,11 @@ export const streamController = {
         }
     },
 
-    solution: (req: Request, res: Response) => {
+    solution: async (req: Request, res: Response) => {
         logger.success('Triggered Piped Stream (/api/streams/solution)');
 
         try {
-            streamService.goodStream(res);
+            await streamService.goodStream(res);
         } catch (error) {
             logger.error(`Error in good stream: ${error}`);
             if (!res.headersSent) {
